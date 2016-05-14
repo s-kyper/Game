@@ -1,0 +1,23 @@
+﻿  game.cpp
+c:\users\pinkdonut\desktop\game7\level.h(25): warning C4305: 'initializing' : truncation from 'double' to 'const float'
+c:\users\pinkdonut\desktop\game7\level.h(30): warning C4305: 'initializing' : truncation from 'double' to 'const float'
+c:\users\pinkdonut\desktop\game7\game.cpp(48): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\pinkdonut\desktop\game7\game.cpp(66): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(226) : see declaration of 'freopen'
+c:\users\pinkdonut\desktop\game7\game.cpp(89): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+c:\users\pinkdonut\desktop\game7\game.cpp(89): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\pinkdonut\desktop\game7\game.cpp(97): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+c:\users\pinkdonut\desktop\game7\game.cpp(97): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\pinkdonut\desktop\game7\game.cpp(142): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(226) : see declaration of 'freopen'
+c:\users\pinkdonut\desktop\game7\game.cpp(276): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+c:\users\pinkdonut\desktop\game7\game.cpp(283): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+c:\users\pinkdonut\desktop\game7\game.cpp(289): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+  Generating Code...
+  Compiling...
+  gameObject.cpp
+c:\users\pinkdonut\desktop\game7\level.h(25): warning C4305: 'initializing' : truncation from 'double' to 'const float'
+c:\users\pinkdonut\desktop\game7\level.h(30): warning C4305: 'initializing' : truncation from 'double' to 'const float'
+c:\users\pinkdonut\desktop\game7\gameobject.cpp(39): warning C4244: 'argument' : conversion from 'const int' to 'float', possible loss of data
+  Generating Code...
+  myGame1.vcxproj -> C:\Users\pinkdonut\documents\visual studio 2013\Projects\myGame1\Debug\myGame1.exe
