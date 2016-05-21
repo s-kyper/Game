@@ -33,7 +33,6 @@ const unsigned char	CellSymbol_Ship		 = 'S';
 const unsigned char	CellSymbol_Bullet	 = '|';
 const unsigned char	CellSymbol_Alien	 = 'X';
 
-const int cooldownTime = 4811;
 const int shipsMinCoef = 1;
 const int shipsMaxCoef = 11;
 
@@ -68,16 +67,16 @@ const unsigned char levelData0[levelRows][levelColumns + 1] =
 
 const unsigned char levelRandomData0[levelRandomRows][levelRandomColumns + 1] =
 {
-	"              XX  XXXXXXXXXXXXXX  XX              ",
-	"              XXXX    XXXXXX    XXXX              ",
-	"              XX  XXXX      XXXX  XX              ",
-	"               X   XXXX    XXXX   X               ",
-	"              XX    XXXXXXXXXX    XX              ",
-	"               XXXXX          XXXXX               ",
-	"              XXXXXXXXXXXXXXXXXXXXXX              ",
-	"              XX    X X    X X    XX              ",
-	"              XX   XX XXXXXX XX   XX              ",
-	"              XX    X X    X X    XX              ",
+	"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX              ",
+	"XXXXXXXX  XXXXXXXXXXXXXXXX  XXXXXXXX              ",
+	"XX  XXXX  XX  XXXXXXXX  XX  XXXX  XX              ",
+	"XXXX  XXXX                XXXX  XXXX              ",
+	"XX  XX  XXXX            XXXX  XX  XX              ",
+	"XX  XX    XXXX        XXXX    XX  XX              ",
+	"XX  XXXXXX X XXX    XXX X XXXXXX  XX              ",
+	"X     XXXX  X   XXXX   X  XXXX     X              ",
+	"      XXXXXX    X  X    XXXXXX                    ",
+	"X                X  X              X              ",
 };
 
 const sf::IntRect alienImage = sf::IntRect(pixelsPerCell, 0, pixelsPerCell, pixelsPerCell);

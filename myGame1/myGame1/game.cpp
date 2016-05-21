@@ -29,6 +29,7 @@ Game::Game()
 
 	m_shipFireCooldownTime = 0.0;
 	m_alienAmplitudeTime = 0.0;
+	lastCos = 0.0;
 
 	m_renderSystem = 0;
 
@@ -112,7 +113,7 @@ bool Game::frame()
 
 	// Calculate delta time
 	clock_t clockNow = clock();
-	gameTime = clockNow % cooldownTime;
+	gameTime = clockNow;
 	clock_t deltaClock = clockNow - m_clockLastFrame;
 	float deltaTime = float(deltaClock) / CLOCKS_PER_SEC;
 	m_clockLastFrame = clockNow;
@@ -161,7 +162,7 @@ void Game::render()
 
 	std::ostringstream osscore;
 	osscore << score;
-	if ((score <= maxScore) || ((brokenHighscore) && (score - maxScore >= 10))) {
+	if ((score <= maxScore) || ((brokenHighscore) && (score - maxScore >= eps))) {
 		text->setString("score: " + osscore.str());
 	}
 	else {
@@ -174,6 +175,7 @@ void Game::render()
 
 void Game::update(float dt)
 {
+	bool up = false;
 	// Update all game objects
 	for (int i = 0; i < gameObjectsCountMax; i++) 
 	{
@@ -263,16 +265,21 @@ void Game::update(float dt)
 				 {
 					 if (object->getY() >= screenRows - 1)
 						 m_isGameActive = false;
-					 else
+					 else {
 						 object->setXSpeed(alienAmplitude * cos(m_alienAmplitudeTime));
+						 if ((cos(m_alienAmplitudeTime) > 0) && (lastCos < 0)) {
+							 up = true;
+						 }
+						 lastCos = cos(m_alienAmplitudeTime);
+					 }
 					 break;
-				 }
+				 } 
 			 }
 		}
 	}
-	
 
-	if ((gameTime % cooldownTime == 0)) {
+	if (up) {
+		up = false;
 		float k = score / 50;
 		if (k < shipsMinCoef) k = shipsMinCoef;
 		if (k >= shipsMaxCoef) k = shipsMaxCoef;

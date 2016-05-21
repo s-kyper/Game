@@ -8,7 +8,8 @@
 
 /////////////////////////////////////
 // Constants
-const int gameObjectsCountMax = 1024;
+const int gameObjectsCountMax = 2048;
+const int eps = 10;
 
 /////////////////////////////////////
 // Class Game
@@ -40,6 +41,7 @@ private:
 
 	float m_shipFireCooldownTime;
 	float m_alienAmplitudeTime;
+	float lastCos;
 	int score;
 	int maxScore;
 	clock_t gameTime;
